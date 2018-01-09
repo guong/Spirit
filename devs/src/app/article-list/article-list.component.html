@@ -1,0 +1,31 @@
+
+<nz-layout>
+  <nz-sider class="sp_sider">
+    <ul nz-menu [nzMode]="'inline'" class="no_bg">
+      <li nz-menu-item *ngFor="let c of category" >
+        <span title><i class="anticon anticon-mail"></i> {{c.name}}</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-content>
+    <nz-timeline>
+
+      <nz-timeline-item [nzColor]="'blue'" *ngFor="let a of articles">
+        <nz-card >
+          <ng-template #title>
+            {{a.title}}
+          </ng-template>
+          <ng-template #extra>
+            <a href="/article/{{a.id}}">More</a>
+          </ng-template>
+          <ng-template #body>
+            {{a.summary}}
+          </ng-template>
+        </nz-card>
+      </nz-timeline-item>
+
+      <nz-pagination [nzPageIndex]="1" [nzTotal]="500"></nz-pagination>
+
+    </nz-timeline>
+  </nz-content>
+</nz-layout>

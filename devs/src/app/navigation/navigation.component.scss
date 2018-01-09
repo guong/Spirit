@@ -1,0 +1,63 @@
+
+.sp_top {
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 48px;
+  background: #fafafa;
+  >ul{
+    width: 1160px;
+    margin: 0 auto;
+    background: #fafafa;
+
+    .sp_logo a{
+      color: red;
+    }
+
+    .sp_fly_l {
+      animation: fly_l 1s linear 0s infinite alternate
+    }
+
+    @keyframes fly_l {
+      0% {
+        transform: rotateY(0deg);
+        transform-origin: 100% 50%;
+      }
+      25% {
+        transform: rotateY(45deg);
+        transform-origin: 100% 50%;
+      }
+      50% {
+        transform: rotateY(60deg);
+        transform-origin: 100% 50%;
+      }
+      100% {
+        transform: rotateY(0deg);
+        transform-origin: 100% 50%;
+      }
+    }
+
+    .sp_fly_r {
+      animation: fly_l 1s linear 0s infinite alternate
+    }
+
+    @keyframes fly_r {
+      0% {
+        transform: rotateY(180deg);
+        transform-origin: 0% 50%;
+      }
+      25% {
+        transform: rotateY(135deg);
+        transform-origin: 0% 50%;
+      }
+      50% {
+        transform: rotateY(130deg);
+        transform-origin: 0% 50%;
+      }
+      100% {
+        transform: rotateY(180deg);
+        transform-origin: 0% 50%;
+      }
+    }
+  }
+
+}
